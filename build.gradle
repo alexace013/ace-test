@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.github.alexace013'
+version = '1.0-SNAPSHOT'
+
+description = "Special repository to creating simple (UI, API, etc.)tests using different free web-resources"
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'com.codeborne', name: 'selenide', version: '7.8.1'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.1'
+}
